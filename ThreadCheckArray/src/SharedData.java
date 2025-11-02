@@ -4,12 +4,24 @@ public class SharedData
 	private boolean [] winArray;
 	private boolean flag;
 	private final int b;
+	private String winnerThread;
 	
 	public SharedData(int[] array, int b) {
 		
 		this.array = array;
 		this.b = b;
 	}
+	
+	
+	 public synchronized String getWinnerThread() {
+        return winnerThread;
+	 }
+
+    public synchronized void setWinnerThread(String name) {
+        // Set winner only once (first finder)
+        if (this.winnerThread == null)
+            this.winnerThread = name;
+    }
 
 	public boolean[] getWinArray() 
 	{

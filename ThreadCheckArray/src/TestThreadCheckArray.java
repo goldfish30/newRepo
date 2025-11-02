@@ -35,6 +35,12 @@ public class TestThreadCheckArray {
 				System.out.println("Sorry");
 				return;
 			}
+			
+			
+			 if (sd.getWinnerThread() != null)
+	                System.out.println("Winner thread: " + sd.getWinnerThread());
+			
+			
 			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().length);
 			System.out.print("I:    ");
 			for(int index = 0; index < sd.getArray().length ; index++)
