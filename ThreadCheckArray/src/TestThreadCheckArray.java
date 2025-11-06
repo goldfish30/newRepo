@@ -46,6 +46,9 @@ public class TestThreadCheckArray {
 			timeElapsed = finish - start;
 			// System.out.println("Time elapsed: " + timeElapsed / 1000000.0 + "ms");
 			
+			 if (sd.getWinnerThread() != null)
+	                System.out.println("Winner thread: " + sd.getWinnerThread());
+						
 			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().length);
 			System.out.print("I:    ");
 			for(int index = 0; index < sd.getArray().length ; index++)
